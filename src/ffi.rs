@@ -541,6 +541,11 @@ pub extern fn quiche_conn_is_established(conn: &mut Connection) -> bool {
 }
 
 #[no_mangle]
+pub extern fn quiche_conn_is_in_early_data(conn: &mut Connection) -> bool {
+    conn.is_in_early_data()
+}
+
+#[no_mangle]
 pub extern fn quiche_conn_is_closed(conn: &mut Connection) -> bool {
     conn.is_closed()
 }

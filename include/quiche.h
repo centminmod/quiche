@@ -258,6 +258,10 @@ void quiche_conn_application_proto(quiche_conn *conn, const uint8_t **out,
 // Returns true if the connection handshake is complete.
 bool quiche_conn_is_established(quiche_conn *conn);
 
+// Returns true if the connection has a pending handshake that has progressed
+// enough to send or receive early data.
+bool quiche_conn_is_in_early_data(quiche_conn *conn);
+
 // Returns true if the connection is closed.
 bool quiche_conn_is_closed(quiche_conn *conn);
 
